@@ -1,6 +1,4 @@
 class User < ActiveRecord::Base
-  acts_as_token_authenticatable
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable,
@@ -12,7 +10,7 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :email
 
-  has_many :goals
-  has_one  :address_book
+  has_many :goals, :dependent => :destroy
+  has_one  :address_book, :dependent => :destroy
   has_many :contacts, :through => :address_book
 end

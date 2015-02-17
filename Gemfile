@@ -12,7 +12,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.0'
-gem 'simple_token_authentication', '~> 1.0'
+
+gem 'bourbon', '~> 4.2'
+gem 'neat', '~> 1.5'
 
 gem 'unicorn'
 
@@ -29,4 +31,7 @@ group :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'database_cleaner'
   gem 'faker'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
 end

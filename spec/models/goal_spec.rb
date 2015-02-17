@@ -7,12 +7,18 @@ RSpec.describe Goal, :type => :model do
   it { should belong_to(:category) }
   it { should have_many(:updates)  }
 
-  it { should_not be_complete }
+  it { should validate_presence_of(:topic) }
 
-  it 'should be complete when completed' do
-    @goal.date_completed = DateTime.now
-    expect(@goal).to be_complete
+  context '#complete?' do
+    it 'false when date_completed nil' do
+      @goal.date_completed = nil
+      expect(@goal.complete?).to eq(false)
+    end
+
+    it 'true when date_completed is set' do
+      @goal.date_completed = DateTime.now
+      expect(@goal.complete?).to eq(true)
+    end
   end
-
 
 end
