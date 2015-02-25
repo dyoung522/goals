@@ -3,16 +3,25 @@
 %table
   %thead
     %tr
-      %th
-      %th
+      %th Topic
+      %th Date Started
+      %th Date Due
+      %th Date Completed
       %th
       
   %tbody
     - @goals.each do |goal|
       %tr
-        %td= link_to 'Show', goal
-        %td= link_to 'Edit', edit_goal_path(goal)
-        %td= link_to 'Destroy', goal, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= goal.topic
+        %td= goal.date_start
+        %td= goal.date_due
+        %td= goal.date_completed
+        %td
+          = link_to 'Show', goal
+          \|
+          = link_to 'Edit', edit_goal_path(goal)
+          \|
+          = link_to 'Destroy', goal, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
