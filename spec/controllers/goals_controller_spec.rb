@@ -9,8 +9,8 @@ RSpec.describe GoalsController, :type => :controller do
     {
         topic: 'Topic',
         date_start: DateTime.now,
-        date_due: nil,
-        date_completed: nil,
+        date_due: DateTime.now,
+        date_completed: DateTime.now,
     }
   }
 
@@ -104,7 +104,7 @@ RSpec.describe GoalsController, :type => :controller do
         goal.reload
         expect(goal.topic).to eq new_attributes[:topic]
         expect(goal.date_due).to eq new_attributes[:date_due]
-        expect(goal.date_start).to eq valid_attributes[:date_start]
+        expect(goal.date_start).to eq new_attributes[:date_start]
       end
 
       it 'assigns the requested goal as @goal' do
