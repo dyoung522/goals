@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'goals#index'
+  root 'application#index'
 
   resources :goals
 
