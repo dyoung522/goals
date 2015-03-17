@@ -4,7 +4,7 @@
 
   App.addRegions
     headerRegion: '#header-region',
-    mainRegion: '#main-region',
+    mainRegion:   '#main-region',
     footerRegion: '#footer-region'
 
   App.addInitializer ->
