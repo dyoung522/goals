@@ -8,7 +8,8 @@
     footerRegion: '#footer-region'
 
   App.addInitializer ->
-    App.module("FooterApp").start()
+    App.module('HeaderApp').start()
+    App.module('FooterApp').start()
 
   App.on 'initialize:after', ->
     if Backbone.history

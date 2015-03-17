@@ -34,7 +34,7 @@ RSpec.describe GoalsController, :type => :controller do
   describe 'GET show' do
     it 'assigns the requested goal as @goal' do
       goal = Goal.create! valid_attributes
-      get :show, {:id => goal.to_param}
+      get :list, {:id => goal.to_param}
       expect(assigns(:goal)).to eq(goal)
     end
   end

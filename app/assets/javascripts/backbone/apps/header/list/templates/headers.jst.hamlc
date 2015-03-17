@@ -1,0 +1,7 @@
+#header
+  %nav.navbar.navbar-default
+    .container-fluid
+      .navbar-header
+        %span.navbar-brand Goals Demo!
+      .collapse.navbar-collapse.pull-right
+        %ul.nav.navbar-nav

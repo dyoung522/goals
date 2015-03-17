@@ -11,8 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require turbolinks
-//= require lib/handlebars
+//= require hamlcoffee
 //= require lib/underscore
 //= require lib/backbone
 //= require lib/marionette
