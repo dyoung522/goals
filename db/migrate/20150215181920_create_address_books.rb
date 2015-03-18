@@ -2,7 +2,7 @@ class CreateAddressBooks < ActiveRecord::Migration
   def change
     create_table :address_books do |t|
       t.string :name
-      t.references :user
+      t.references :users
 
       t.timestamps null: false
     end

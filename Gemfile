@@ -12,9 +12,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.0'
-gem 'handlebars_assets'
+# gem 'handlebars_assets'
+# gem 'eco'
+
 gem 'haml_coffee_assets'
-gem 'eco'
+gem 'rabl-rails'
+gem 'gon'
 
 gem 'compass-rails'
 gem 'sprockets-rails', '>= 2.1.4'

@@ -3,9 +3,11 @@
   Show.Controller =
 
     showFooter: ->
-      footerView = @getFooterView()
+      currentUser = App.request 'get:current:user'
+      footerView = @getFooterView({model: currentUser})
       App.footerRegion.show footerView
 
-    getFooterView: ->
+    getFooterView: (options) ->
       new Show.Footer
+        model: options.model
 

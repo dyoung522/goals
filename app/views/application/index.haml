@@ -5,4 +5,8 @@
 #footer-region
 
 :javascript
-  $(function() { Goals.start(); });
+  $(function(){
+    Goals.start({
+      currentUser: gon.current_user
+    });
+  });

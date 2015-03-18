@@ -7,7 +7,7 @@ FactoryGirl.define do
     address_book { create(:address_book) }
 
     trait :with_goals do
-      goals { create_list(:goals, 5) }
+      goals { create_list(:goal, 5) }
     end
   end
 

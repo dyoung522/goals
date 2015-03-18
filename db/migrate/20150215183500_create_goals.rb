@@ -5,7 +5,7 @@ class CreateGoals < ActiveRecord::Migration
       t.datetime :date_start
       t.datetime :date_due
       t.datetime :date_completed
-      t.references :user
+      t.references :users
       t.references :category
 
       t.timestamps null: false

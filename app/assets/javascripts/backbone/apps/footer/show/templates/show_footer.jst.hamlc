@@ -1,2 +1,2 @@
 #footer.container
-  %p.muted Our Footer!
+  %p.muted Welcome #{@name}!
