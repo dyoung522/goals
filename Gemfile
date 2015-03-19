@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.0'
+gem 'rails', '~> 4.2'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'haml-rails', '~> 0.8'
@@ -15,9 +15,11 @@ gem 'devise', '~> 3.0'
 # gem 'handlebars_assets'
 # gem 'eco'
 
+#
 gem 'haml_coffee_assets'
 gem 'rabl-rails'
 gem 'gon'
+gem 'js-routes'
 
 gem 'compass-rails'
 gem 'sprockets-rails', '>= 2.1.4'

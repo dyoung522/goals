@@ -2,6 +2,9 @@
 
   App = new Marionette.Application
 
+  # Our default route for thie App
+  App.rootRoute = Routes.users_path()
+
   App.on 'before:start', (options) ->
     @currentUser = App.request 'set:current:user', options.currentUser
 
@@ -19,4 +22,6 @@
 
   App.on 'start', ->
     Backbone.history.start() if Backbone.history
+    @navigate(@rootRoute, trigger: true) if @getCurrentRoute() is ''
+
   App
