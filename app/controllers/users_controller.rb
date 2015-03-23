@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   respond_to :json
 
   def index
+    sleep 3
     @users = User.all
     respond_to do |format|
       format.json { render json: @users, layout: false }

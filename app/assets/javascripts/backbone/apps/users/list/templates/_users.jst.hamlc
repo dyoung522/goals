@@ -1,5 +1,6 @@
-%table
+%table.table.table-striped.table-bordered
   %thead
     %tr
-      %th User
+      %th Name
+      %th Created
   %tbody

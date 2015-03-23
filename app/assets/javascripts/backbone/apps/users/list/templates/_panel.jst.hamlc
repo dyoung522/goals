@@ -1,1 +1,1 @@
-Panel View!
+Total Users: #{@items.length}
